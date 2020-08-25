@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>getting_started slides</title>
+<title>syntax slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13242,23 +13242,15 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-Lecture-0:-Getting-Started">Python Lecture 0: Getting Started<a class="anchor-link" href="#Python-Lecture-0:-Getting-Started">&#182;</a></h1><h2 id="Jarret-Petrillo-copyright-2020">Jarret Petrillo copyright 2020<a class="anchor-link" href="#Jarret-Petrillo-copyright-2020">&#182;</a></h2><h2 id="AMS-595">AMS 595<a class="anchor-link" href="#AMS-595">&#182;</a></h2>
+<h1 id="Python-Lecture-1:-Syntax">Python Lecture 1: Syntax<a class="anchor-link" href="#Python-Lecture-1:-Syntax">&#182;</a></h1><h2 id="Jarret-Petrillo-copyright-2020">Jarret Petrillo copyright 2020<a class="anchor-link" href="#Jarret-Petrillo-copyright-2020">&#182;</a></h2><h2 id="AMS-595">AMS 595<a class="anchor-link" href="#AMS-595">&#182;</a></h2>
 </div>
 </div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-exactly-is-a-computer?">What exactly is a computer?<a class="anchor-link" href="#What-exactly-is-a-computer?">&#182;</a></h1><h1 id="How-can-one-machine-perform-so-many-tasks?">How can one machine perform so many tasks?<a class="anchor-link" href="#How-can-one-machine-perform-so-many-tasks?">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="``A-Computer-is-a-machine-that-stores-and-manipulates-information-under-the-control-of-a-changeable-program.&quot;">``A Computer is a machine that stores and manipulates information under the control of a changeable program."<a class="anchor-link" href="#``A-Computer-is-a-machine-that-stores-and-manipulates-information-under-the-control-of-a-changeable-program.&quot;">&#182;</a></h2><p>-John Zelle</p>
-<p>A gas pump is a machine that manipulates information (price of gas, quantity needed), but it only performs one task.</p>
-<p>Computers by definition run many tasks.  Software is the key.</p>
+<h1 id="Homework">Homework<a class="anchor-link" href="#Homework">&#182;</a></h1><p>You were asked to read PEP 8: The Python Style Guide.</p>
+<p>Today's lecture will recap the reading.</p>
 
 </div>
 </div>
@@ -13266,10 +13258,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-can't-a-computer-do?">What can't a computer do?<a class="anchor-link" href="#What-can't-a-computer-do?">&#182;</a></h1><p>Some problems are <em>intractable</em> or <em>impossible</em>.</p>
-<p><em>Intractable</em> means the problem solution requires too much memory or too much time to run.</p>
-<p><em>Impossible</em> means no algorithm can exist to solve the task.</p>
-<p>ref: <a href="https://en.wikipedia.org/wiki/Computational_complexity_theory">https://en.wikipedia.org/wiki/Computational_complexity_theory</a></p>
+<h1 id="&quot;Readability-counts&quot;.">"Readability counts".<a class="anchor-link" href="#&quot;Readability-counts&quot;.">&#182;</a></h1><p>Let us start coding by learning the elements of clean code.</p>
+<p>Whhere does syntax end and <em>style</em> start?</p>
 
 </div>
 </div>
@@ -13277,186 +13267,388 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="An-operating-system-is-software-that-runs-other-software.">An operating system is software that runs other software.<a class="anchor-link" href="#An-operating-system-is-software-that-runs-other-software.">&#182;</a></h1><blockquote><p><em>python</em> hello_world.py</p>
-</blockquote>
-<p>This command "python" runs the file "hello_world.py"</p>
-<p>All the details of this operation are <em>operating-system specific</em>.</p>
-<p>The results are the same:</p>
-<blockquote><p>"hello world!"</p>
-</blockquote>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-is-a-programming-language.">Python is a programming language.<a class="anchor-link" href="#Python-is-a-programming-language.">&#182;</a></h1><h2 id="Why-do-we-need-programming-languages?">Why do we need programming languages?<a class="anchor-link" href="#Why-do-we-need-programming-languages?">&#182;</a></h2><p>Consider the sentence "I saw the man in the park with a telescope."</p>
-<p>Who has the telescope?</p>
-<p>Meaning comes from context and different languages resolve conflicts in different ways.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-is-a-high-level-programming-language.">Python is a <em>high-level</em> programming language.<a class="anchor-link" href="#Python-is-a-high-level-programming-language.">&#182;</a></h1><h2 id="There-are-few-memory-directives.">There are few memory directives.<a class="anchor-link" href="#There-are-few-memory-directives.">&#182;</a></h2><p>Python is based on an educational-only language called <em>ABC</em>.</p>
-<p>There is a reason it is easy to use.</p>
-<p><em>The goal of the Python module is to not just learn how to use Python, but to learn how to write production code in Python</em></p>
-<p>This is a way higher hurdle.  "Knowing Python" means different things to every employer.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Misconception:-Python-is-``easy.&quot;">Misconception: Python is ``easy."<a class="anchor-link" href="#Misconception:-Python-is-``easy.&quot;">&#182;</a></h1><h2 id="It-is-easy-to-get-started,-but-professional-Python-programmers-have-an-amazing-breadth.">It is easy to get started, but professional Python programmers have an amazing breadth.<a class="anchor-link" href="#It-is-easy-to-get-started,-but-professional-Python-programmers-have-an-amazing-breadth.">&#182;</a></h2>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python==Breadth">Python==Breadth<a class="anchor-link" href="#Python==Breadth">&#182;</a></h1>
-<pre><code>sqlite3 – interacting with SQLite databases
-xml – creating and processing XML files
-csv – CSV file reading and writing
-logging – basics logging facility for Python
-configparser – configuration file parser
-os – interacting with the operating system,
-datetime – manipulating with dates and time
-io – working with streams,
-time – time access and conversions
-math – a basic tool for elementary evaluations
-NumPy – fundamental package for scientific computing
-SciPy – an ecosystem for mathematics, science, and engineering
-Matplotlib – 2D plotting library producing publication quality figures
-Pandas – a library providing high-performance and data analysis tools
-SciKit-image – a collection of algorithms for image processing
-tkinter — Python interface to Tcl/Tk
-    tkinter’s application life cycle
-    Widgets, windows and events
-    Sample applications
-pygame – a simple way of developing multimedia applications
-PEP 20 – The Zen of Python: a collection of principles that influences the design of Python code
-PEP 8 – Style Guide for Python Code: coding conventions for code comprising the standard library in the main Python distribution
-PEP 257 – Docstring Conventions: what is docstring and some semantics as well as conventions associated with them
-**Object-Oriented** </code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="There-are-different-versions-of-Python">There are different versions of Python<a class="anchor-link" href="#There-are-different-versions-of-Python">&#182;</a></h1><h2 id="The-syntax-varies.">The syntax varies.<a class="anchor-link" href="#The-syntax-varies.">&#182;</a></h2><p>Python 2.7.18 reads Python version 2.7 release 18.</p>
-<p>Python 2.7 and Python 3.5 are not compatiable.  There was a break, and the syntax changed.</p>
-<p>We will use <em>Python 3.8</em></p>
-<p>It is the newest version as of August 2020.</p>
-<p>history ref: <a href="https://en.wikipedia.org/wiki/Python_%28programming_language%29">https://en.wikipedia.org/wiki/Python_%28programming_language%29</a></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Are-there-any-questions?">Are there any questions?<a class="anchor-link" href="#Are-there-any-questions?">&#182;</a></h1><p>These materials are available on github at github.com/cfd113311/python595.</p>
-<p>Please log on to the Python help session Wednesdays 12pm - 1pm EST or use picktime to schedule a one-on-one session 1pm - 2:20pm.</p>
-<p>Let's get started!</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-has-a-shell">Python has a shell<a class="anchor-link" href="#Python-has-a-shell">&#182;</a></h1><blockquote><p>typing <em>python</em> opens an interpretated session ("interpretator")</p>
-</blockquote>
-<p>The shell is a stand-alone interpretator.</p>
-<p>Python commands executed in the interpretator display their result.</p>
-<p>When it starts:</p>
-<blockquote><p>Python 3.7.3 (default, Oct  7 2019, 12:56:13) 
-[GCC 8.3.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.</p>
-</blockquote>
-<p>:&gt;&gt;&gt; help(print)</p>
-<p>This is the help screen for the print function.  <em>help()</em> is always a friend.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Interpretator-experiments">Interpretator experiments<a class="anchor-link" href="#Interpretator-experiments">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Shell-and-interpretator-versus-scripts">Shell and interpretator versus scripts<a class="anchor-link" href="#Shell-and-interpretator-versus-scripts">&#182;</a></h1><p>The function <em>sum</em> and <em>greet</em> disappear after closing the interpreator.</p>
-<p>The same happens in the shell.</p>
-<p>Scripts are <em>reusable</em> portions of code that execute an algorithm.</p>
-<p>The importance is they contain all the instructions for the Python program.</p>
-<p>"Interpreter and shell are good for <em>testing</em>"
-<a href="https://www.youtube.com/watch?v=50XxuscFy1I">https://www.youtube.com/watch?v=50XxuscFy1I</a></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="``run&quot;-a-Python-script-on-your-own-computer-before-continuing.">``run" a Python script on your own computer before continuing.<a class="anchor-link" href="#``run&quot;-a-Python-script-on-your-own-computer-before-continuing.">&#182;</a></h1><p>There are files available next to the slides.</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Extra-1:-Clone-the-repository-from-github.">Extra 1: Clone the repository from github.<a class="anchor-link" href="#Extra-1:-Clone-the-repository-from-github.">&#182;</a></h1><h2 id="Standard-collaboration-tools-are-essential-in-big-projects.">Standard collaboration tools are essential in big projects.<a class="anchor-link" href="#Standard-collaboration-tools-are-essential-in-big-projects.">&#182;</a></h2><p>Cloning a repository means creating a local version.  We are using github as a dropbox.  In reality <em>git</em> is a version control software.</p>
-<p>Repository hosted at <a href="https://github.com/cfd113311/python595">https://github.com/cfd113311/python595</a></p>
-<p>Instructions: <a href="https://www.wikihow.com/Clone-a-Repository-on-Github">https://www.wikihow.com/Clone-a-Repository-on-Github</a></p>
-<p>(The Git GUI = Grahical User Interface is a nice tool.)</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Extra-2:-Setup-Jupyter-Notebook">Extra 2: Setup Jupyter Notebook<a class="anchor-link" href="#Extra-2:-Setup-Jupyter-Notebook">&#182;</a></h1><h2 id="The-slides-are-jupyter-notebooks.">The slides are jupyter notebooks.<a class="anchor-link" href="#The-slides-are-jupyter-notebooks.">&#182;</a></h2><p>It is a nice combination of <em>shell</em> and <em>script</em>.</p>
-<p><a href="https://jupyter.org/install">https://jupyter.org/install</a></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Extra-3:-How-does-``running''-differ-on-different-operating-systems.">Extra 3: How does ``running'' differ on different operating systems.<a class="anchor-link" href="#Extra-3:-How-does-``running''-differ-on-different-operating-systems.">&#182;</a></h1><h2 id="500-of-the-world's-500-fastest-computers-use-Linux">500 of the world's 500 fastest computers use <em>Linux</em><a class="anchor-link" href="#500-of-the-world's-500-fastest-computers-use-Linux">&#182;</a></h2><h2 id="Why?">Why?<a class="anchor-link" href="#Why?">&#182;</a></h2><p>ref: <a href="https://en.wikipedia.org/wiki/Operating_system">https://en.wikipedia.org/wiki/Operating_system</a></p>
-<p>ref: <a href="https://en.wikipedia.org/wiki/Computational_science">https://en.wikipedia.org/wiki/Computational_science</a></p>
-<p>extra ref: <a href="https://www.quora.com/Why-does-Linux-seem-so-much-faster-than-Windows?share=1">https://www.quora.com/Why-does-Linux-seem-so-much-faster-than-Windows?share=1</a></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Recap">Recap<a class="anchor-link" href="#Recap">&#182;</a></h1><p>The tools learned today were:</p>
-<ol>
-<li>Big picture computer science</li>
-<li>Python interpretator</li>
-<li>Python scripting</li>
+<h1 id="Key-Ideas">Key Ideas<a class="anchor-link" href="#Key-Ideas">&#182;</a></h1><ol>
+<li>Indentation</li>
+<li>Whitespace</li>
+<li>Import statements</li>
+<li>Naming conventions</li>
+<li>Exception catching</li>
 </ol>
-<p>The next session is Lecture 1: Python Syntax</p>
-<p>HW: read PEP 8 <a href="https://www.python.org/dev/peps/pep-0008/">https://www.python.org/dev/peps/pep-0008/</a></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Python-Requires-Indentation">Python Requires Indentation<a class="anchor-link" href="#Python-Requires-Indentation">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">generic_function</span><span class="p">(</span><span class="n">var_one</span><span class="p">,</span> <span class="n">var_two</span><span class="p">,</span>
+                     <span class="n">var_three</span><span class="p">,</span> <span class="n">var_four</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This is the docstring.</span>
+<span class="sd">    It comments will appear in the help text.</span>
+<span class="sd">    generic_function takes four inputs.</span>
+<span class="sd">    Comments should be complete sentences.</span>
+<span class="sd">    There should be no additional line spaces.</span>
+<span class="sd">    Notice the function variables are aligned.</span>
+<span class="sd">    This aids readibility.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">var_one</span> <span class="o">==</span> <span class="n">var_two</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;The first two inputs are equal.&quot;</span>
+    <span class="k">elif</span> <span class="n">var_one</span> <span class="o">==</span> <span class="n">var_three</span><span class="p">:</span>
+        <span class="c1"># This is an in-line comment.</span>
+        <span class="c1"># Use these sparingly.</span>
+        <span class="c1"># Notice the line below was too long,</span>
+        <span class="c1"># and we broke the link and continued below</span>
+        <span class="c1"># with the &#39;\&#39;</span>
+        <span class="k">return</span> <span class="s2">&quot;The first two inputs are not equal, </span><span class="se">\</span>
+<span class="s2">                but the first and second are equal.&quot;</span>
+    
+    <span class="k">if</span> <span class="n">var_three</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">var_four</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Notice the indentation matches the depth.</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">var_four</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Whitespace">Whitespace<a class="anchor-link" href="#Whitespace">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Correct:</span>
+<span class="n">spam</span><span class="p">(</span><span class="n">ham</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">{</span><span class="n">eggs</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+
+<span class="c1"># Wrong:</span>
+<span class="n">spam</span><span class="p">(</span> <span class="n">ham</span><span class="p">[</span> <span class="mi">1</span> <span class="p">],</span> <span class="p">{</span> <span class="n">eggs</span><span class="p">:</span> <span class="mi">2</span> <span class="p">}</span> <span class="p">)</span>
+
+<span class="c1"># Correct:</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,)</span>
+
+<span class="c1"># Wrong:</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="c1"># Correct:</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Wrong:</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">,</span> <span class="n">y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Correct:</span>
+<span class="n">spam</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Wrong:</span>
+<span class="n">spam</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Correct:</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">long_variable</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># Wrong:</span>
+<span class="n">x</span>             <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span>             <span class="o">=</span> <span class="mi">2</span>
+<span class="n">long_variable</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Correct:</span>
+<span class="k">def</span> <span class="nf">complex</span><span class="p">(</span><span class="n">real</span><span class="p">,</span> <span class="n">imag</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">magic</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="n">real</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="n">imag</span><span class="p">)</span>
+
+<span class="c1"># Wrong:</span>
+<span class="k">def</span> <span class="nf">complex</span><span class="p">(</span><span class="n">real</span><span class="p">,</span> <span class="n">imag</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">magic</span><span class="p">(</span><span class="n">r</span> <span class="o">=</span> <span class="n">real</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="n">imag</span><span class="p">)</span> <span class="c1"># too many spaces.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Import-Statements">Import Statements<a class="anchor-link" href="#Import-Statements">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Correct:</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Wrong:</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Correct:</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="k">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">PIPE</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The modules below are custom modules.</span>
+<span class="c1"># It is very helpful to structure your own code</span>
+<span class="c1"># into pieces.  Modules do that and ...</span>
+
+<span class="kn">import</span> <span class="nn">mypkg.sibling</span>
+<span class="kn">from</span> <span class="nn">mypkg</span> <span class="k">import</span> <span class="n">sibling</span>
+<span class="kn">from</span> <span class="nn">mypkg.sibling</span> <span class="k">import</span> <span class="n">example</span>
+
+<span class="c1"># make it possible to share your code.</span>
+<span class="kn">from</span> <span class="nn">yourpkg</span> <span class="k">import</span> <span class="n">brother</span><span class="p">,</span> <span class="n">sister</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Naming-Conventions">Naming Conventions<a class="anchor-link" href="#Naming-Conventions">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>lowercase</p>
+<p>lower_case_with_underscores</p>
+<p>UPPERCASE</p>
+<p>UPPER_CASE_WITH_UNDERSCORES</p>
+<p>CapitalizedWords (or CapWords, or CamelCase)</p>
+<p>mixedCase (initial is lowercase)</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>Package and Module Names</em>: Modules should have short, all-lowercase names.</p>
+<p><em>Class Names</em>: Class names should normally use the CapWords convention.</p>
+<p><em>Function and Variable Names</em>: Function names should be lowercase, with words separated by underscores.</p>
+<p><em>Constants</em>: Constants are usually defined on a module level and written in all capital letters with underscores separating words.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Exception-Catching">Exception Catching<a class="anchor-link" href="#Exception-Catching">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">collection</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;key_name&quot;</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">collection</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-36-addaa153c559&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> collection <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">}</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> key <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;key_name&#34;</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>value <span class="ansi-blue-fg">=</span> collection<span class="ansi-blue-fg">[</span>key<span class="ansi-blue-fg">]</span>
+
+<span class="ansi-red-fg">KeyError</span>: &#39;key_name&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">collection</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;key_name&quot;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">collection</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+<span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>None
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">platform_specific_module</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">platform_specific_module</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">do_something</span><span class="p">(</span><span class="n">with_input</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">pass</span>
+    <span class="c1"># this excepts any possible error!</span>
+    <span class="c1"># way too broad!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Next-Lecture">Next Lecture<a class="anchor-link" href="#Next-Lecture">&#182;</a></h1><p>We will cover "Basic Data Structures."</p>
+<p>If you have some familiarity with Python, please read
+PEP 372 -</p>
+<p><a href="https://www.python.org/dev/peps/pep-0372/">https://www.python.org/dev/peps/pep-0372/</a></p>
 
 </div>
 </div>
