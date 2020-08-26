@@ -45,7 +45,7 @@ type(a)
 help(a)
 
 
-# In[3]:
+# In[2]:
 
 
 # mutable means it is editable
@@ -55,6 +55,59 @@ a = [1,2,3]
 a.append(4)
 
 print(a)
+
+
+# In[3]:
+
+
+# accessing list elements
+
+a[0]
+
+
+# In[4]:
+
+
+a[3]
+
+
+# In[5]:
+
+
+a[-1]
+
+
+# In[7]:
+
+
+print(len(a))
+a[4]
+
+
+# In[9]:
+
+
+# extract sublist
+
+a[2:3] # last element is not included
+
+
+# In[10]:
+
+
+a[1:]
+
+
+# In[13]:
+
+
+a[:2]
+
+
+# In[14]:
+
+
+a[:] # copy of list
 
 
 # In[4]:
