@@ -31,7 +31,8 @@
 # Note that month-end sales revenue includes all transactions
 # for one month only, and should be dated the last day of the month.
 # You are given three test files.
-# Your code will have to correctly complete the tast for these three,
+# Your code will have to correctly complete the task for the three csv's
+# in this folder,
 # and a secret fourth file of the same type.
 
 # Bonus (+10pts)
