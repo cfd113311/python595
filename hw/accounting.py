@@ -17,7 +17,8 @@
 
 # But, the casing is sometimes different (!!!).
 # This means "date" and "dAte" sometimes
-# appear.
+# appear.  And!
+# client names also have random capitalization.
 
 # Your script will be run from the command line.
 # python accounting.py old_file0312202.csv
