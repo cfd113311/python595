@@ -1,4 +1,4 @@
-# 30 pts.
+# 50 pts.
 # You are the data scientist at an accounting firm.
 # A new client gives you their inventory logs,
 # but they are in horrible condition.
@@ -25,8 +25,8 @@
 # with the script and the csv file.
 
 # Your task is to print:
-# largest client by revenue = quantity*price (10 pts.)
-# aggregate sales revenue (10 pts.)
+# largest client by revenue = quantity*price (20 pts.)
+# aggregate sales revenue (20 pts.)
 # month-end sales revenue (10 pts.)
 
 # Note that month-end sales revenue includes all transactions
