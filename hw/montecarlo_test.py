@@ -9,12 +9,12 @@
 # 3. Integral value is average function value times
 #   domain length.
 
-from montecarlo import 2DNumericalIntegrator
+from montecarlo import NumericalIntegrator
 
 import math
 
 if __name__ == "__main__":
-    numerical_integrator = 2DNumercalIntegrator()
+    numerical_integrator = NumercalIntegrator()
 
    numerical_integrator.set_objective( math.sin) # set objective function to evaluate.
 
