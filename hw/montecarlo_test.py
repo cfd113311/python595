@@ -14,7 +14,7 @@ from montecarlo import NumericalIntegrator
 import math
 
 if __name__ == "__main__":
-    numerical_integrator = NumercalIntegrator()
+    numerical_integrator = NumericalIntegrator()
 
    numerical_integrator.set_objective( math.sin) # set objective function to evaluate.
 
