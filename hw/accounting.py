@@ -41,6 +41,15 @@
 # python accounting.py old_data0312202.csv old_data032231d.csv new_data231.csv 
 # and print the first three tasks on the aggregate parsed data.
 # What else needs to change?
+#
+# Bonus (+10pts)
+# If you can implement the bonus by adding
+# one line of code and marginally modifying another line
+# you get 10 more points.
+# use comments to tell me about your design.
+#
+# Good luck!
+
 
 import sys
 
