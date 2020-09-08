@@ -12,6 +12,8 @@
 # 1. descriptive statistics
 # 1. histogram
 # 2. clustering
+# 
+# reference: *Learning SciPy for Numerical and Scientific Computing* by Blanco-Silva
 
 # In[78]:
 
