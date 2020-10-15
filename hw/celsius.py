@@ -12,7 +12,7 @@ def parse_command_line(rawinput):
     It returns useful errors.
 
     This command is executed from the commandline.
-    
+
     For example:
     python celsius.py 86
 
@@ -32,13 +32,26 @@ def parse_command_line(rawinput):
 
     Good luck!
     '''
-    raise NotImplementedError
+    if len(rawinput) != 2:
+        raise IOError("This program converts one and only one " +
+                      "fahrenheit reading to celsius.")
+
+    try:
+        degree_fahrenheit = float(rawinput[1])
+    except ValueError:
+        raise ValueError("The input must be a number. Make sure " +
+                         "you didn't include a units designation.")
+
+    return degree_fahrenheit
+
 
 def calculate_celsius(degree_fahrenheit):
     '''
     Print conversion after parse.
     '''
-    raise NotImplementedError
+    degree_celsius = (degree_fahrenheit-32) * 5/9
+    print(f"{degree_fahrenheit:g}F is {degree_celsius:g}C")
+
 
 if __name__ == "__main__":
     command_line_inputs = sys.argv

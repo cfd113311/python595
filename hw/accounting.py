@@ -38,7 +38,7 @@
 
 # Bonus (+10pts)
 # Have your script accept any number of inputs:
-# python accounting.py old_data0312202.csv old_data032231d.csv new_data231.csv 
+# python accounting.py old_data0312202.csv old_data032231d.csv new_data231.csv
 # and print the first three tasks on the aggregate parsed data.
 # What else needs to change?
 #
@@ -52,16 +52,57 @@
 
 
 import sys
+import calendar
 
 def parse_command_line(raw_command_line):
     return raw_command_line[1:]
 
 def parse_csv(filename):
-    raise NotImplementedError
+    """
+    Reads the csv file corresponding to filename,
+    then iterates over the entries tracking total
+    revenue, revenue by client, and revenue by
+    month. Finally, printing this information.
+    """
+    client_to_rvnu = dict()
+    agg_rvnu = 0
+    month_to_rvnu = dict()
+
+    with open(filename) as f:
+        f.readline()
+        for line in f.readlines():
+            # rsplit is used, and the number of splits is limited in
+            # order to remove the delimiting commas while accounting
+            # for the use of commas in the corporate name, legal status syntax
+            client, qnty, price, date = line.rsplit(",", 3)
+            client = client.strip(' " ').lower() # standardize client names
+            rvnu = float(qnty)*float(price)
+            month = date[:7]
+
+            # add new revenue to client_to_rvnu
+            if client in client_to_rvnu.keys():
+                client_to_rvnu[client] += rvnu
+            else:
+                client_to_rvnu[client] = rvnu
+
+            agg_rvnu += rvnu
+            # add new revenue to month-end sales
+            if month in month_to_rvnu.keys():
+                month_to_rvnu[month] += rvnu
+            else:
+                month_to_rvnu[month] = rvnu
+
+    largest_client = max(client_to_rvnu, key=lambda x: client_to_rvnu[x])
+    print(f"Largest Client by revenue: {largest_client.title()}")
+    print(f"Aggregate sales revenue: {agg_rvnu}")
+    print("Month-end sales revenue:")
+    for month in sorted(month_to_rvnu):
+        last_day = calendar.monthrange(int(month[:4]), int(month[5:]))[1]
+        print(f"{month}-{last_day},\t{month_to_rvnu[month]}")
+
 
 if __name__ == "__main__":
     files_to_parse = parse_command_line(sys.argv)
     last_file = files_to_parse[-1]
     print("Beginning parse of", last_file)
     parse_csv(last_file)
-    
